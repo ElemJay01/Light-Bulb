@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: rgb(74, 74, 74);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.wire {
+  background: #000;
+  height: 200px;
+  width: 2.3px;
+}
+
+.holder {
+  width: 15px;
+  height: 15px;
+  background: #000;
+}
+
+.bulb--neck {
+  width: 15px;
+  height: 10px;
+  background: #949494;
+}
+
+.bulb--berry {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #949494;
+  transform: translateY(-3px);
+}
+
+.switch {
+  position: absolute;
+  background-color: white;
+  height: 55px;
+  width: 40px;
+  right: 50px;
+  bottom: 50%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inner--switch {
+  border: 1px solid rgb(156, 155, 155);
+  height: 30px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.switch--on {
+  box-shadow: 0px 4px 2px 0px rgb(156, 155, 155) inset;
+}
+
+.switch--off {
+  box-shadow: 0px -4px 2px 0px rgb(156, 155, 155) inset;
+}
+
+.bolt--tp,
+.bolt--bm {
+  background: #000;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  margin: 5px 0;
+}
+
+.lights--on {
+  background-color: white;
+  filter: blur(2px) drop-shadow(0px 0px 75px #ffffff);
+}
+
+.shadow {
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  position: absolute;
+  left: -280px;
+  bottom: -400px;
+  background-color: #fff;
+  justify-self: center;
+  filter: blur(300px) drop-shadow(0px 100px 400px #ffffff);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 455px) {
+  .switch {
+    right: 5px;
+  }
+}
+@media (max-width: 375px) {
+  .switch {
+    bottom: 20px;
+    right: 20px;
+  }
+}
